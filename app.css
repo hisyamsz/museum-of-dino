@@ -1,0 +1,215 @@
+:root {
+    --bg2: rgba(245, 222, 179, 0.5);
+    --shadow: 4px 4px 10px rgba(1, 1, 2, 0.5);
+}
+
+*::selection {
+    color: #333;
+    background-color: rgb(253, 205, 118);
+}
+
+body {
+    min-height: 5000px;
+    background-color: #73432d;
+    font-family: "Nunito", sans-serif;
+}
+
+
+/* Navbar Style */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.850);
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    color: #6e3013;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-link.active {
+    color: #6f2604;
+}
+
+.navbar-nav {
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+}
+
+/* Hero Style */
+.hero {
+    min-height: 100vh;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/main.jpg');
+    filter: grayscale(0.5) blur(0.5px) brightness(0.5);
+    background-size: cover;
+    background-position: center;
+    z-index: -1
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(115, 67, 45, 0.8) 8%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+    margin-bottom: 8rem;
+    padding: 0 7%;
+    max-width: 53rem;
+}
+
+.hero .content h5 {
+    color: white;
+    font-size: 2.2rem;
+    text-shadow: var(--shadow);
+    line-height: 1.2;
+}
+
+.hero .content h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+    text-shadow: var(--shadow);
+    line-height: 1.2;
+}
+
+.hero .content p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: var(--shadow);
+    line-height: 1.2;
+}
+
+.hero .content .btn-more {
+    background-color: #744b37;
+    padding: 0.5rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.hero .content .btn-more:hover {
+    background-color: #9a6449;
+}
+
+/* About Style */
+.about,
+.gallery {
+    /* background-color: var(--bg2); */
+    padding: 4.5rem 2rem;
+    margin-top: 4rem;
+}
+
+.about h1,
+.gallery h1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: var(--shadow);
+}
+
+.about h1:before,
+.about h1:after,
+.gallery h1::before,
+.gallery h1::after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 2rem 0 0;
+    flex: 1 0 2rem;
+}
+
+.about h1:after,
+.gallery h1::after {
+    margin: 0 0 0 2rem;
+}
+
+.about h4 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-shadow: var(--shadow);
+}
+
+.about h4 span {
+    color: var(--bg2);
+}
+
+.about-text {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    /* text-shadow: var(--shadow); */
+}
+
+.about img {
+    box-shadow: var(--shadow);
+    /* filter: drop-shadow(0 0 0.75rem #333); */
+}
+
+.actives {
+    color: #6e3013;
+}
+
+/* Gallery Style */
+.gallery {
+    background-color: var(--bg2);
+    margin-top: 3rem;
+}
+
+/* Media Query */
+@media (max-width: 1200px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 90%;
+    }
+
+    .about-details {
+        padding-top: 2rem;
+    }
+
+    .about .row {
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 70%;
+    }
+
+}
